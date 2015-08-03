@@ -1,0 +1,13 @@
+#ifndef MATHCONSTANTS_H
+#define MATHCONSTANTS_H
+
+#ifdef MACROPI
+	#define PI 3.14159265358979323846
+	#define M_2PI 6.28318530717958647692
+#else
+	const double PI = 3.14159265358979323846;
+	const double M_2PI = 6.28318530717958647692;
+#endif
+
+
+#endif
