@@ -76,7 +76,7 @@ public slots:
 	void SetInterpolate(bool _value = true) { bInterpolate = _value; }; // enables interpolation
 	void SetStartPointSelection(START _value) { startpoint = _value; }; // phase unwrapping will start from CENTRE or pixel with MAXAMPLITUDE 
 
-	void SetMaxResiduaDistance(int _distance = -1); //< nastaveni maximalni vzdalenosti propojitelnych rezidui -1 = automaticky
+	void SetMaxResiduaDistance(int _distance = -1); //< maximum distance for oposite residues connection -1 = automatic
 
 	void SetMaxReziduaDistConst(double _resconst);
 

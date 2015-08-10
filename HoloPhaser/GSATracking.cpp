@@ -51,11 +51,10 @@ GSATracking::GSATracking(QObject* parent)
 	unwrappedCount = 0;
 
 
-	bInterpolate =	true;
+	bInterpolate =	false;
 	startpoint =	CENTRE;
 	resconst =		4.;
 
-	//Amplitude tracking
 	mode =					STANDARD;
 	inpaintIterations =		200;
 	dilate =				0;
@@ -811,6 +810,11 @@ void GSATracking::DilateCuts()
 	{
 		ImageTrasforms::Dilate(branchCuts, branchCuts, size.width(), size.height(), dilate);
 	}
+
+	// for saving secondary mask
+	//FILE* f = fopen("this.raw", "wb");
+	//fwrite(branchCuts, sizeof(branchCuts[0]), size.width() * size.height(), f);
+	//fclose(f);
 }
 
 void GSATracking::InpaintPhase()
